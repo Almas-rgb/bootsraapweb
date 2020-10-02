@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v4.0.1">
+    <title>ToDoList - Задачи</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/checkout/">
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/dist/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="category-task.css" rel="stylesheet">
+  </head>
+  <body class="bg-light">
+    <div class="container">
+  <div class="py-5 text-center">
+  </div>
+
+  <div class="row">
+    <div class="col-md-8 order-md-1">
+      <h4 class="mb-3">Задачи</h4>
+      <form class="needs-validation" novalidate>
+        <div class="mb-3">
+          <label for="categoryNameList">Категория</label>
+          <select class="custom-select" id="categoryNameList">
+            <option selected>Выбрать категорию</option>
+            <option value="1">Категория 1</option>
+            <option value="2">Категория 2</option>
+            <option value="3">Категория 3</option>
+          </select>
+        </div>
+        <div class="row">
+          <div class="col-md-8 mb-3">
+            <label for="taskName">Название задачи</label>
+            <input type="text" class="form-control" id="taskName" placeholder="" value="" required>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="dateStart">Дата начала</label>
+          <input type="text" class="form-control" id="dateStart" required>
+        </div>
+        <div class="mb-3">
+          <label for="dateEnd">Дата завершения</label>
+          <input type="text" class="form-control" id="dateEnd" required>
+        </div>
+
+
+        <hr class="mb-4">
+        <button class="btn btn-primary btn-lg btn-block" type="submit">Сохранить</button>
+      </form>
+    </div>
+  </div>
+
+  <footer class="my-5 pt-5 text-muted text-center text-small">
+    <p class="mb-1">&copy; 2020 ToDoList</p>
+  </footer>
+</div>
+</html>
