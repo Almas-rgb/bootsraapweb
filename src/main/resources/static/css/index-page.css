@@ -1,0 +1,13 @@
+.container {
+  max-width: 1100px;
+}
+
+.lh-condensed { line-height: 1.25; }
+
+.svg-delete:hover {
+	filter: brightness(1.5);
+}
+
+.svg-edit:hover {
+    filter: hue-rotate(45deg);
+}

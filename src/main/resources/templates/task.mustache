@@ -14,7 +14,7 @@
     <link href="/assets/dist/css/bootstrap.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="category-task.css" rel="stylesheet">
+    <link href="/css/category-task.css" rel="stylesheet">
     <!-- DataTime Picker -->
     <link href="/assets/dist/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
     <link href="/assets/dist/css/bootstrap-datatimepicker2.min.css" rel="stylesheet">
@@ -27,7 +27,7 @@
   <div class="row">
     <div class="col-md-8 order-md-1">
       <h4 class="mb-3">Задачи</h4>
-      <form class="needs-validation" novalidate>
+      <form class="needs-validation" method="post" novalidate>
         <div class="mb-3">
           <label for="categoryNameList">Категория</label>
           <select class="custom-select" id="categoryNameList">
@@ -40,7 +40,7 @@
         <div class="row">
           <div class="col-md-8 mb-3">
             <label for="taskName">Название задачи</label>
-            <input type="text" class="form-control" id="taskName" placeholder="" value="" required>
+            <input type="text" class="form-control" id="taskName" placeholder="" name="name" value="{{#testTask.name}}{{testTask.name}}{{/testTask.name}}" required>
           </div>
         </div>
 
@@ -48,21 +48,21 @@
           <label for="dateStart">Дата начала</label>
           <!-- <input type="text" class="form-control" id="dateStart" required> -->
           <div class="input-group date form_datetime" data-date-format="dd MM yyyy - HH:ii p" data-link-field="dateStart">
-            <input class="form-control" size="16" type="text" value="" readonly>
+            <input class="form-control" size="16" type="text" name="" value="{{#testTask.dateStart}}{{testTask.dateStart}}{{/testTask.dateStart}}" readonly>
             <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
             <span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
           </div>
-          <input type="hidden" id="dateStart" value="" />
+          <input type="hidden" id="dateStart" name="dateStart" value="{{#testTask.dateStart}}{{testTask.dateStart}}{{/testTask.dateStart}}" />
         </div>
         <div class="mb-3">
           <label for="dateEnd">Дата завершения</label>
           <!-- <input type="text" class="form-control" id="dateEnd" required> -->
           <div class="input-group date form_datetime" data-date-format="dd MM yyyy - HH:ii p" data-link-field="dateEnd">
-            <input class="form-control" size="16" type="text" value="" readonly>
+            <input class="form-control" size="16" type="text" name="" value="{{#testTask.dateEnd}}{{testTask.dateEnd}}{{/testTask.dateEnd}}" readonly>
             <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
             <span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
           </div>
-          <input type="hidden" id="dateEnd" value="" />
+          <input type="hidden" id="dateEnd" name="dateEnd" value="{{#testTask.dateEnd}}{{testTask.dateEnd}}{{/testTask.dateEnd}}" />
         </div>
 
 

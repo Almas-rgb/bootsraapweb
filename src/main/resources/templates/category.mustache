@@ -14,7 +14,7 @@
   <link href="/assets/dist/css/bootstrap.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="category-task.css" rel="stylesheet">
+    <link href="/css/category-task.css" rel="stylesheet">
   </head>
   <body class="bg-light">
     <div class="container">
@@ -24,11 +24,11 @@
   <div class="row">
     <div class="col-md-8 order-md-1">
       <h4 class="mb-3">Категории</h4>
-      <form class="needs-validation" novalidate>
+      <form class="needs-validation" method="post" novalidate>
         <div class="row">
           <div class="col-md-8 mb-4">
             <label for="categoryName">Название категории</label>
-            <input type="text" class="form-control" id="categoryName" placeholder="" value="" required>
+            <input type="text" class="form-control" id="categoryName" name="name" placeholder="" value="{{#category.name}}{{category.name}}{{/category.name}}" required>
           </div>
         </div>
 

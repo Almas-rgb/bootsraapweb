@@ -7,11 +7,10 @@
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Jekyll v4.0.1">
     <title>ToDoList - Авторизация</title>
-
     <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/sign-in/">
 
     <!-- Bootstrap core CSS -->
-<link href="assets/dist/css/bootstrap.css" rel="stylesheet">
+<link href="assets/dist/css/bootstrap.css" type="text/css" rel="stylesheet">
 
     <style>
       .bd-placeholder-img {
@@ -30,16 +29,17 @@
       }
     </style>
     <!-- Custom styles for this template -->
-    <link href="signin.css" rel="stylesheet">
+    <link href="css/signin.css" type="text/css" rel="stylesheet">
   </head>
   <body class="text-center">
-    <form class="form-signin">
+  <form class="form-signin" method="post">
   <img class="mb-4" src="assets/brand/ToDo-List-icon.png" alt="" width="96" height="96">
   <h1 class="h3 mb-3 font-weight-normal">Авторизация</h1>
   <label for="inputEmail" class="sr-only">Email </label>
-  <input type="email" id="inputEmail" class="form-control" placeholder="Email" required autofocus>
+<!--  <input type="email" id="inputEmail" class="form-control" placeholder="Email" required autofocus>-->
+  <input type="text" id="inputEmail" class="form-control" placeholder="Логин" name="username" required autofocus>
   <label for="inputPassword" class="sr-only">Пароль</label>
-  <input type="password" id="inputPassword" class="form-control" placeholder="Пароль" required>
+  <input type="password" id="inputPassword" class="form-control" placeholder="Пароль" name="password" required>
   <div class="checkbox mb-3">
     <label>
       <input type="checkbox" value="remember-me"> Запомнить

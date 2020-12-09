@@ -1,140 +1,106 @@
 <!doctype html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Jekyll v4.0.1">
     <title>ToDoList</title>
-
     <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/checkout/">
 
     <!-- Bootstrap core CSS -->
-    <link href="/assets/dist/css/bootstrap.css" rel="stylesheet">
+<link href="assets/dist/css/bootstrap.css" rel="stylesheet">
 
     <style>
-        .bd-placeholder-img {
-            font-size: 1.125rem;
-            text-anchor: middle;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
         }
-        @media (min-width: 768px) {
-            .bd-placeholder-img-lg {
-                font-size: 3.5rem;
-            }
-        }
+      }
     </style>
     <!-- Custom styles for this template -->
-    <link href="/index-page.css" rel="stylesheet">
-</head>
-<body class="bg-light">
-<div class="container">
-    <div class="py-5 text-center">
-        <img class="d-block mx-auto mb-4" src="/assets/brand/ToDo-List-icon.png" alt="" width="96" height="96">
-        <h2>{{ title }}</h2>
-        <p class="lead">Страница со списком категорий и задач</p>
-    </div>
+    <link href="css/index-page.css" rel="stylesheet">
+  </head>
+  <body class="bg-light">
+    <div class="container">
+  <div class="py-5 text-center">
+    <img class="d-block mx-auto mb-4" src="assets/brand/ToDo-List-icon.png" alt="" width="96" height="96">
+    <h2>Главная страница</h2>
+    <p class="lead">Страница со списком категорий и задач</p>
+  </div>
 
-    <div class="row">
-        <div class="col-md-4 order-md-2 mb-4">
-            <h4 class="d-flex justify-content-between align-items-center mb-3">
-                <span class="text-muted">Категории</span>
-                <span class="badge badge-secondary badge-pill">3</span>
-            </h4>
-            <ul class="list-group mb-3">
-                <li class="list-group-item d-flex justify-content-between lh-condensed">
-                    <div>
-                        <h6 class="my-0">Категория 1</h6>
-                        <small class="text-muted">Краткое описание</small>
-                    </div>
-                    <span class="text-muted">$12</span>
-                </li>
-                <li class="list-group-item d-flex justify-content-between lh-condensed">
-                    <div>
-                        <h6 class="my-0">Категория 2</h6>
-                        <small class="text-muted">Краткое описание</small>
-                    </div>
-                    <span class="text-muted">$8</span>
-                </li>
-                <li class="list-group-item d-flex justify-content-between lh-condensed">
-                    <div>
-                        <h6 class="my-0">Категория 3</h6>
-                        <small class="text-muted">Краткое описание</small>
-                    </div>
-                    <span class="text-muted">$5</span>
-                </li>
-                <li class="list-group-item d-flex justify-content-between bg-light">
-                    <div class="text-success">
-                        <h6 class="my-0">Категория 4</h6>
-                        <small>EXAMPLECODE</small>
-                    </div>
-                    <span class="text-success">-$5</span>
-                </li>
-                <li class="list-group-item d-flex justify-content-between">
-                    <span>Категория 5</span>
-                    <strong>$20</strong>
-                </li>
-            </ul>
+  <div class="row">
+    <div class="col-md-4 order-md-2 mb-4">
+      <h4 class="d-flex justify-content-between align-items-center mb-3">
+        <span class="text-muted">Категории</span>
+        <span class="badge badge-secondary badge-pill">{{countCategory}}</span>
+      </h4>
+      <ul class="list-group mb-3">
+          {{#categories}}
+        <li class="list-group-item d-flex justify-content-between">
+          <span>{{name}}</span>
+          <strong></strong>
+        </li>
+        {{/categories}}
+      </ul>
 
-            <form class="card p-2">
-                <div class="input-group">
-                    <button type="submit" class="btn btn-primary btn-block">Добавить категорию</button>
-                </div>
-            </form>
+      <form class="card p-2">
+        <div class="input-group">
+          <a href="/category" type="submit" class="btn btn-primary btn-block">Добавить категорию</a>
         </div>
-        <div class="col-md-8 order-md-1">
-            <div class="row">
-                <div class="col-sm-8">
-                    <h4 class="mb-3">Задачи</h4>
-                </div>
-                <div class="col-sm-4">
-                    <button type="submit" class="btn btn-primary btn-block">Добавить задачу</button>
-                </div>
-            </div>
-            <table class="table table-hover">
-                <thead>
-                <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Название</th>
-                    <th scope="col">Дата начала</th>
-                    <th scope="col">Статус</th>
-                    <th scope="col">Дата завершения</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Задача 1</td>
-                    <td>01.01.2020</td>
-                    <td>@активна</td>
-                    <td>01.01.2020</td>
-                </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td>Задача 2</td>
-                    <td>01.01.2020</td>
-                    <td>@активна</td>
-                    <td>01.01.2020</td>
-                </tr>
-                <tr>
-                    <th scope="row">3</th>
-                    <td>Задача 3</td>
-                    <td>01.01.2020</td>
-                    <td>@активна</td>
-                    <td>01.01.2020</td>
-                </tr>
-                </tbody>
-            </table>
-        </div>
+      </form>
     </div>
+    <div class="col-md-8 order-md-1">
+      <div class="row">
+        <div class="col-sm-8">
+          <h4 class="mb-3">Задачи</h4>
+        </div>
+        <div class="col-sm-4">
+          <a href="/task" type="submit" class="btn btn-primary btn-block">Добавить задачу </a>
+        </div>
+      </div>
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Название</th>
+            <th scope="col">Дата начала</th>
+            <th scope="col">Статус</th>
+            <th scope="col">Дата завершения</th>
+            <th scope="col">Ред.</th>
+            <th scope="col">Уд.</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{#tasks}}
+              <tr>
+                  <th scope="row">{{id}}</th>
+                  <td>{{name}}</td>
+                  <td>{{dateStart}}</td>
+                  <td>@{{status}}</td>
+                  <td>{{dateEnd}}</td>
+                  <td><a href="task/update/{{id}}"><img class="svg-edit" src="/assets/brand/edit-icon.svg"/></a></td>
+                  <td><a href="task/delete/{{id}}"><img class="svg-delete" src="/assets/brand/delete-icon.svg"/></a></td>
+              </tr>
+          {{/tasks}}
+        </tbody>
+      </table>
+    </div>
+  </div>
 
-    <footer class="my-5 pt-5 text-muted text-center text-small">
-        <p class="mb-1">&copy; 2020 ToDoList</p>
-    </footer>
+  <footer class="my-5 pt-5 text-muted text-center text-small">
+    <p class="mb-1">&copy; 2020 ToDoList</p>
+  </footer>
 </div>
 </body>
 </html>
